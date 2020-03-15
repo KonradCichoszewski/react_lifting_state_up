@@ -1,7 +1,7 @@
 import React from 'react';
 import '../index.css';
 
-class ButtonsPanel extends React.Component{
+export default class ButtonsPanel extends React.Component{
 
     constructor(props){
         super(props);
@@ -11,25 +11,15 @@ class ButtonsPanel extends React.Component{
         this.changeToTeal = this.changeToTeal.bind(this);
     }
 
-    changeToRed() {
-        this.props.onAction('red')
-    }
-
-    changeToYellow() {
-        this.props.onAction('yellow')
-    }
-
-    changeToGreen() {
-        this.props.onAction('green')
-    }
-
-    changeToTeal() {
-        this.props.onAction('teal')
-    }
-
+    changeToRed() {this.props.onAction('red')}
+    changeToYellow() {this.props.onAction('yellow')}
+    changeToGreen() {this.props.onAction('green')}
+    changeToTeal() {this.props.onAction('teal')}
+    
     render(){
     return (
-        <div><h2>This is the buttons panel:</h2>
+        <div>
+            <h2>This is the buttons panel:</h2>
             <div className='buttonsPanel'>
                 <p className='colorButton' onClick={this.changeToRed}>Red</p>
                 <p className='colorButton' onClick={this.changeToYellow}>Yellow</p>
@@ -39,5 +29,3 @@ class ButtonsPanel extends React.Component{
         </div>
     )};
 }
-
-export default ButtonsPanel;

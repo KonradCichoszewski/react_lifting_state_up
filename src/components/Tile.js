@@ -1,7 +1,7 @@
 import React from 'react';
 import '../index.css';
 
-class Tile extends React.Component {
+export default class Tile extends React.Component {
     render(){ 
         return(
             <div className="tileHolder">
@@ -11,5 +11,3 @@ class Tile extends React.Component {
         )
     }
 }
-
-export default Tile;

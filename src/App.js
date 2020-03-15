@@ -4,7 +4,7 @@ import './index.css';
 import ButtonsPanel from './components/ButtonsPanel';
 import Tile from './components/Tile';
 
-class App extends React.Component {
+export default class App extends React.Component {
   constructor(props){
     super(props);
     this.handleColorChange = this.handleColorChange.bind(this);
@@ -13,9 +13,9 @@ class App extends React.Component {
     }
   }
 
-  handleColorChange(passedColor){
+  handleColorChange(color){
     this.setState({
-      color: passedColor
+      color: color
     })
   }
 
@@ -28,5 +28,3 @@ class App extends React.Component {
     )
   }
 }
-
-export default App;
